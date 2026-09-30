@@ -59,9 +59,10 @@
       height: 55vh;
       min-height: 360px;
       background-image: url('1789450803113.png');
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
       display: flex;
       align-items: center;
       justify-content: center;
@@ -119,9 +120,14 @@ background-repeat: no-repeat;
       justify-content: center;
       align-items: center;
 
-      font-size: 9px;
-      letter-spacing: 1px;
-      color: #aaa;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .product-name {
@@ -235,22 +241,36 @@ background-repeat: no-repeat;
         font-size: 9px;
       }
 
+      /*
+        모바일 상품 영역
+        좌우 여백을 넓혀 상품이 너무 크게 보이지 않도록 설정
+      */
       .products {
-        padding: 75px 28px;
+        padding: 70px 42px 85px;
       }
 
       .section-title {
-        margin-bottom: 25px;
+        margin-bottom: 28px;
       }
 
       .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 7px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 16px;
         row-gap: 38px;
       }
 
       .product-image {
         margin-bottom: 11px;
+        aspect-ratio: 3 / 4;
+      }
+
+      .product-name {
+        font-size: 9px;
+        line-height: 1.5;
+      }
+
+      .product-price {
+        font-size: 9px;
       }
 
       .editorial {
@@ -273,19 +293,19 @@ background-repeat: no-repeat;
 
     <a href="#" class="logo">0nl_</a>
 
-<nav>
+    <nav>
 
-    <a href="#shop">SHOP</a>
+      <a href="#shop">SHOP</a>
 
-    <a href="#clothing">CLOTHING</a>
+      <a href="#clothing">CLOTHING</a>
 
-    <a href="#jewelry">JEWELRY</a>
+      <a href="#jewelry">JEWELRY</a>
 
-    <a href="#acc">ACC</a>
+      <a href="#acc">ACC</a>
 
-    <a href="#about" class="hide-mobile">ABOUT</a>
+      <a href="#about" class="hide-mobile">ABOUT</a>
 
-</nav>
+    </nav>
 
   </header>
 
@@ -301,7 +321,7 @@ background-repeat: no-repeat;
         QUIET &nbsp; / &nbsp; SIMPLE &nbsp; / &nbsp; TIMELESS
       </p>
 
-      <a href="#shop">
+      <a href="#jewelry">
         VIEW COLLECTION
       </a>
 
@@ -310,58 +330,55 @@ background-repeat: no-repeat;
   </section>
 
 
-  <!-- NEW ARRIVALS -->
+  <!-- JEWELRY -->
   <section class="products" id="shop">
 
-    <h2 class="section-title" id="new">
-      NEW ARRIVALS
+    <h2 class="section-title" id="jewelry">
+      JEWELRY
     </h2>
 
 
     <div class="product-grid">
 
-     <!-- PRODUCT 01 : TINY PEARL EARRINGS -->
-<a class="product" href="tiny-pearl-earrings.html">
 
-    <div class="product-image">
-        <img src="tiny-pearl-main.jpg" alt="tiny pearl earrings">
+      <!-- PRODUCT 01 : TINY PEARL EARRINGS -->
+      <a class="product" href="tiny-pearl-earrings.html">
+
+        <div class="product-image">
+          <img src="tiny-pearl-main.jpg" alt="Tiny Pearl Earrings">
+        </div>
+
+        <div class="product-name">
+          TINY PEARL EARRINGS
+        </div>
+
+        <div class="product-price">
+          13,900 KRW
+        </div>
+
+      </a>
+
+
+      <!-- PRODUCT 02 : CLEAN EARRINGS -->
+      <a class="product" href="clean-earrings.html">
+
+        <div class="product-image">
+          <img src="clean-earrings-01.jpg.png" alt="Silver925 Clean Earrings">
+        </div>
+
+        <div class="product-name">
+          SILVER925 CLEAN EARRINGS
+        </div>
+
+        <div class="product-price">
+          13,900 KRW ~
+        </div>
+
+      </a>
+
+
     </div>
 
-    <div class="product-name">
-        TINY PEARL EARRINGS
-    </div>
-
-    <div class="product-price">
-        13,900 KRW
-    </div>
-
-</a>
-
-
-
- <!-- PRODUCT 02 -->
-
-<a class="product jewelry" id="jewelry" href="clean-earrings.html">
-   <div class="product-image">
-
-    <img src="clean-earrings-01.jpg.png" alt="Silver925 Clean Earrings">
-
-</div>
-
-    <div class="product-name">
-
-        SILVER925 CLEAN EARRINGS
-
-    </div>
-
-    <div class="product-price">
-
-        13,900 KRW ~
-
-    </div>
-
-</a>
-          </div>
   </section>
 
 
